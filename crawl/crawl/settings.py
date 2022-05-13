@@ -26,3 +26,8 @@ SPLASH_COOKIES_DEBUG = False
 SPIDER_MIDDLEWARES = {
     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
 }
+
+ITEM_PIPELINES = {
+    'crawl.pipelines.CrawlPipeline': 300,
+    # 'crawl.pipelines.JsonWriterPipeline': 800,
+}

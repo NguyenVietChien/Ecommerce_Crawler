@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="col-8 mt-5">
+    <form class="form-inline mb-1 justify-content-center" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+                <div class="mx-3">{{ field }}</div>
+        {% endfor %}
+        <button type="button" class="btn btn-outline-success mb-1" id="startCrawl"> Crawl </button>
+    </form>
+</div>
+{% endblock %}
